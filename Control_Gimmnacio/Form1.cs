@@ -105,7 +105,7 @@ namespace Control_Gimmnacio
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            string qry = "select cast(case when pass = HASHBYTES('SHA2_512', '" + txtPass.Text.Trim() + "') then 1 else 0 end as bit) FlagPwdCorrecto from usuarios where usuario = '" + txtUsuario.Text.Trim() + "'";
+            string qry = "SELECT ISNULL((SELECT CAST(CASE WHEN pass = HASHBYTES('SHA2_512', '" + txtPass.Text.Trim() + "') THEN 1 ELSE 0 END AS BIT) from usuarios where usuario = '" + txtUsuario.Text.Trim() + "' ), 0) AS FlagPwdCorrecto";
             if (txtPass.Text == "" || txtUsuario.Text == "" || txtUsuario.Text == "Usuario" | txtPass.Text == "Contraseña")
             {
                 MessageBox.Show("Falto llenar un campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

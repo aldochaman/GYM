@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Control_Gimmnacio.exe" size="3292160">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Control_Gimmnacio.exe" size="3643904">
       <assemblyIdentity name="Control_Gimmnacio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>k5uSttnfn+KhaPshyH4clV9ZJgRZBQFRh+x7o3G3+mw=</dsig:DigestValue>
+        <dsig:DigestValue>ZCh2azWEWB7hsP5MjXP1XMVCvw6RViOIBNgvgPgopU4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -102,13 +102,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Control_Gimmnacio.exe.config" size="531">
+  <file name="Control_Gimmnacio.exe.config" size="526">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/mZZroOJcDh21WWR2fgoo9K+eN2kchPWcvuD5yv3H7s=</dsig:DigestValue>
+      <dsig:DigestValue>DeODjxctRnwVW9KihBxu3Xy5EiGKpClt5IrbXQTwvLY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\editar.ico" size="3310">

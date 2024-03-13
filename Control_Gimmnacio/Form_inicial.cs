@@ -145,5 +145,15 @@ namespace Control_Gimmnacio
         {
             
         }
-    }
+
+          private void panel_cont_Paint(object sender, PaintEventArgs e)
+          {
+
+          }
+
+          private void panel1_Paint(object sender, PaintEventArgs e)
+          {
+
+          }
+     }
 }

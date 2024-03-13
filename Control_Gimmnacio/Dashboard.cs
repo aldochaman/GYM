@@ -257,7 +257,10 @@ namespace Control_Gimmnacio
             string idRec = "";
             foreach (DataRow row in dtEx.Rows)
             {
-                lbMemEx.Text=row["Ex"].ToString();  
+
+                    //lbMemEx.Text=row["Ex"].ToString();  
+                    conEx++;
+                    lbMemEx.Text = conEx.ToString();
             }
             #endregion
 
@@ -267,12 +270,23 @@ namespace Control_Gimmnacio
         string qEx1 = "";
         public void memEx()
         {
-            //agregar boton ver dentro del DGV
-            DataGridViewButtonColumn btnVer = new DataGridViewButtonColumn();
-            btnVer.Name = "Ver";
-            dtGWMemEx.Columns.Add(btnVer);
-            qEx1 = "select M.idMemS as [Clave Socio/Memebresia],(select S.nombre as Nombre from socio S where S.idSocio=idMems) Socio, M.idControl as [ID Membresia],M.tMem as Tipo, M.fechaIngreso as Inicio,M.fechatermino as Termino, M.prom as Promocion, M.estado as Estatus from memSocio M  where M.estado = 'Expirado'";
-            dtGWMemEx.DataSource = dts.consulta(qEx1).Tables[0];
+               // Agregar botón "Ver" dentro del DGV
+               DataGridViewButtonColumn btnVer = new DataGridViewButtonColumn();
+               btnVer.Name = "Ver";
+               dtGWMemEx.Columns.Add(btnVer);
+
+               // Agregar botón "Plan" dentro del DGV
+               DataGridViewButtonColumn btnPlan = new DataGridViewButtonColumn();
+               btnPlan.Name = "Plan";
+               dtGWMemEx.Columns.Add(btnPlan);
+
+               // Agregar botón "Rutina" dentro del DGV
+               DataGridViewButtonColumn btnRutina = new DataGridViewButtonColumn();
+               btnRutina.Name = "Rutina";
+               dtGWMemEx.Columns.Add(btnRutina);
+
+               qEx1 = "select M.idMemS as [Clave Socio/Memebresia],(select S.nombre as Nombre from socio S where S.idSocio=idMems) Socio, M.idControl as [ID Membresia],M.tMem as Tipo, M.fechaIngreso as Inicio,M.fechatermino as Termino, M.prom as Promocion, M.estado as Estatus from memSocio M  where M.estado = 'Expirado'";
+               dtGWMemEx.DataSource = dts.consulta(qEx1).Tables[0];
             
         }
         private void dtGWMemEx_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -292,7 +306,37 @@ namespace Control_Gimmnacio
                 this.dtGWMemEx.Columns[e.ColumnIndex].Width = iconAtomic.Width + 8;
                 e.Handled = true;
             }
-        }
+               if (e.ColumnIndex >= 0 && this.dtGWMemEx.Columns[e.ColumnIndex].Name == "Plan" && e.RowIndex >= 0)
+               {
+                    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                    DataGridViewButtonCell celBoton = this.dtGWMemEx.Rows[e.RowIndex].Cells["Plan"] as DataGridViewButtonCell;
+                    Icon iconAtomic2 = new Icon(Environment.CurrentDirectory + @"\\editar.ico");
+                    /*  string str = "Control_Gimmnacio.editar.ico";
+                      Stream s = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(str);
+                      Icon iconAtomic = new Icon(s);*/
+
+                    e.Graphics.DrawIcon(iconAtomic2, e.CellBounds.Left + 3, e.CellBounds.Top + 3);
+
+                    this.dtGWMemEx.Rows[e.RowIndex].Height = iconAtomic2.Height + 8;
+                    this.dtGWMemEx.Columns[e.ColumnIndex].Width = iconAtomic2.Width + 8;
+                    e.Handled = true;
+               }
+               if (e.ColumnIndex >= 0 && this.dtGWMemEx.Columns[e.ColumnIndex].Name == "Rutina" && e.RowIndex >= 0)
+               {
+                    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                    DataGridViewButtonCell celBoton = this.dtGWMemEx.Rows[e.RowIndex].Cells["Rutina"] as DataGridViewButtonCell;
+                    Icon iconAtomic3 = new Icon(Environment.CurrentDirectory + @"\\editar.ico");
+                    /*  string str = "Control_Gimmnacio.editar.ico";
+                      Stream s = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(str);
+                      Icon iconAtomic = new Icon(s);*/
+
+                    e.Graphics.DrawIcon(iconAtomic3, e.CellBounds.Left + 3, e.CellBounds.Top + 3);
+
+                    this.dtGWMemEx.Rows[e.RowIndex].Height = iconAtomic3.Height + 8;
+                    this.dtGWMemEx.Columns[e.ColumnIndex].Width = iconAtomic3.Width + 8;
+                    e.Handled = true;
+               }
+          }
         #endregion
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -324,20 +368,64 @@ namespace Control_Gimmnacio
 
         }
         vHistorialUs vH = new vHistorialUs();
-        private void dtGWMemEx_CellClick(object sender, DataGridViewCellEventArgs e)
+        vRutinaUs vR = new vRutinaUs();
+        vPlanUs vP = new vPlanUs();
+          private void dtGWMemEx_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-             if (dtGWMemEx.CurrentRow != null)
+               if (dtGWMemEx.CurrentRow != null && e.ColumnIndex >= 0 && e.ColumnIndex < dtGWMemEx.Columns.Count)
                {
-                    if (this.dtGWMemEx.Columns[e.ColumnIndex].Name=="Ver" )
-                    {
-                string c = dtGWMemEx.CurrentRow.Cells[1].Value.ToString();
-                vH.consultaSocio2(c);
-                vH.consultaHistorial2(c);
-                vH.ShowDialog();
-                    }
-             }
-          }
+                    DataGridViewColumn clickedColumn = dtGWMemEx.Columns[e.ColumnIndex];
 
+                    if (!string.IsNullOrEmpty(clickedColumn.Name) && clickedColumn.Name == "Ver")
+                    {
+                         string c = dtGWMemEx.CurrentRow.Cells[3].Value?.ToString();
+
+                         if (!string.IsNullOrEmpty(c))
+                         {
+                              vH.consultaSocio2(c);
+                              vH.consultaHistorial2(c);
+                              vH.ShowDialog();
+                         }
+                         else
+                         {
+                              // Manejar el caso en el que el valor de la celda es nulo o vacío
+                              //MessageBox.Show("La celda seleccionada no contiene un valor válido.");
+                         }
+                    }
+                    if (!string.IsNullOrEmpty(clickedColumn.Name) && clickedColumn.Name == "Plan")
+                    {
+                         string c = dtGWMemEx.CurrentRow.Cells[3].Value?.ToString();
+
+                         if (!string.IsNullOrEmpty(c))
+                         {
+                              vP.consultaSocio2(c);
+                              vP.consultaHistorial2(c);
+                              vP.ShowDialog();
+                         }
+                         else
+                         {
+                              // Manejar el caso en el que el valor de la celda es nulo o vacío
+                              //MessageBox.Show("La celda seleccionada no contiene un valor válido.");
+                         }
+                    }
+                    if (!string.IsNullOrEmpty(clickedColumn.Name) && clickedColumn.Name == "Rutina")
+                    {
+                         string c = dtGWMemEx.CurrentRow.Cells[3].Value?.ToString();
+
+                         if (!string.IsNullOrEmpty(c))
+                         {
+                              vR.consultaSocio2(c);
+                              vR.consultaHistorial2(c);
+                              vR.ShowDialog();
+                         }
+                         else
+                         {
+                              // Manejar el caso en el que el valor de la celda es nulo o vacío
+                              //MessageBox.Show("La celda seleccionada no contiene un valor válido.");
+                         }
+                    }
+               }
+          }
         private void timer1_Tick(object sender, EventArgs e)
         {
             #region ComprueboExpiraciones

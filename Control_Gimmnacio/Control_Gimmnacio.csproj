@@ -175,6 +175,18 @@
     <Compile Include="vHistorialUs.Designer.cs">
       <DependentUpon>vHistorialUs.cs</DependentUpon>
     </Compile>
+    <Compile Include="vPlanUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vPlanUs.Designer.cs">
+      <DependentUpon>vPlanUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vRutinaUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vRutinaUs.Designer.cs">
+      <DependentUpon>vRutinaUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="vVender.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +235,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vHistorialUs.resx">
       <DependentUpon>vHistorialUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vPlanUs.resx">
+      <DependentUpon>vPlanUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vRutinaUs.resx">
+      <DependentUpon>vRutinaUs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vVender.resx">
       <DependentUpon>vVender.cs</DependentUpon>

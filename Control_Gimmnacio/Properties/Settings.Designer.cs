@@ -26,8 +26,7 @@ namespace Control_Gimmnacio.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-ALDO\\SQL2022;Initial Catalog=controlGym;Integrated Security=T" +
-            "rue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HP-ALDO\\SQL2019;Initial Catalog=controlGym;Integrated Security=True")]
         public string controlGymConnectionString {
             get {
                 return ((string)(this["controlGymConnectionString"]));

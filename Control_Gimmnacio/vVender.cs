@@ -120,7 +120,7 @@ namespace Control_Gimmnacio
             else
             {
                 numericUpDown1.Value = 1;
-                decimal to1 = Convert.ToDecimal(dataGridView1.CurrentRow.Cells[3].Value.ToString()) * Convert.ToDecimal(numericUpDown1.Value);
+                decimal to1 = Convert.ToDecimal(dataGridView1.CurrentRow.Cells[2].Value.ToString()) * Convert.ToDecimal(numericUpDown1.Value);
                 txtt.Text = to1.ToString("N2");
                 txtC.Text = "0.00";
             }
