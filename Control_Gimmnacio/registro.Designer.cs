@@ -76,14 +76,13 @@
                // 
                // btnAgregaSocio
                // 
-               this.btnAgregaSocio.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
                this.btnAgregaSocio.Cursor = System.Windows.Forms.Cursors.Hand;
                this.btnAgregaSocio.FlatAppearance.BorderSize = 2;
                this.btnAgregaSocio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGreen;
                this.btnAgregaSocio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
                this.btnAgregaSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                this.btnAgregaSocio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.btnAgregaSocio.Location = new System.Drawing.Point(382, 243);
+               this.btnAgregaSocio.Location = new System.Drawing.Point(410, 303);
                this.btnAgregaSocio.Name = "btnAgregaSocio";
                this.btnAgregaSocio.Size = new System.Drawing.Size(129, 51);
                this.btnAgregaSocio.TabIndex = 9;
@@ -185,7 +184,6 @@
                // 
                // groupPersonales
                // 
-               this.groupPersonales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
                this.groupPersonales.BackColor = System.Drawing.SystemColors.Control;
                this.groupPersonales.Controls.Add(this.dtNacimiento);
                this.groupPersonales.Controls.Add(this.pictureBox3);
@@ -203,9 +201,9 @@
                this.groupPersonales.Controls.Add(this.label7);
                this.groupPersonales.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.groupPersonales.ForeColor = System.Drawing.Color.Orange;
-               this.groupPersonales.Location = new System.Drawing.Point(12, 33);
+               this.groupPersonales.Location = new System.Drawing.Point(12, 92);
                this.groupPersonales.Name = "groupPersonales";
-               this.groupPersonales.Size = new System.Drawing.Size(1012, 204);
+               this.groupPersonales.Size = new System.Drawing.Size(1464, 204);
                this.groupPersonales.TabIndex = 0;
                this.groupPersonales.TabStop = false;
                this.groupPersonales.Text = "Datos de Socio";
@@ -221,9 +219,9 @@
                // pictureBox3
                // 
                this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-               this.pictureBox3.Location = new System.Drawing.Point(758, 105);
+               this.pictureBox3.Location = new System.Drawing.Point(779, 121);
                this.pictureBox3.Name = "pictureBox3";
-               this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+               this.pictureBox3.Size = new System.Drawing.Size(29, 23);
                this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
                this.pictureBox3.TabIndex = 4;
                this.pictureBox3.TabStop = false;
@@ -259,7 +257,6 @@
                // 
                // groupMembresia
                // 
-               this.groupMembresia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
                this.groupMembresia.Controls.Add(this.txtTotal);
                this.groupMembresia.Controls.Add(this.txtClaveM);
                this.groupMembresia.Controls.Add(this.btnCancelarMem);
@@ -278,9 +275,9 @@
                this.groupMembresia.Controls.Add(this.label1);
                this.groupMembresia.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.groupMembresia.ForeColor = System.Drawing.Color.Orange;
-               this.groupMembresia.Location = new System.Drawing.Point(12, 304);
+               this.groupMembresia.Location = new System.Drawing.Point(12, 363);
                this.groupMembresia.Name = "groupMembresia";
-               this.groupMembresia.Size = new System.Drawing.Size(1012, 284);
+               this.groupMembresia.Size = new System.Drawing.Size(1464, 284);
                this.groupMembresia.TabIndex = 4;
                this.groupMembresia.TabStop = false;
                this.groupMembresia.Text = "Datos de Membresia";
@@ -289,7 +286,7 @@
                // 
                this.txtTotal.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.txtTotal.ForeColor = System.Drawing.Color.Red;
-               this.txtTotal.Location = new System.Drawing.Point(830, 97);
+               this.txtTotal.Location = new System.Drawing.Point(828, 143);
                this.txtTotal.Name = "txtTotal";
                this.txtTotal.Size = new System.Drawing.Size(147, 41);
                this.txtTotal.TabIndex = 13;
@@ -310,7 +307,7 @@
                this.btnCancelarMem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                this.btnCancelarMem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.btnCancelarMem.ForeColor = System.Drawing.SystemColors.ControlText;
-               this.btnCancelarMem.Location = new System.Drawing.Point(781, 188);
+               this.btnCancelarMem.Location = new System.Drawing.Point(779, 234);
                this.btnCancelarMem.Name = "btnCancelarMem";
                this.btnCancelarMem.Size = new System.Drawing.Size(100, 42);
                this.btnCancelarMem.TabIndex = 16;
@@ -326,7 +323,7 @@
                this.btnPagaMem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                this.btnPagaMem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.btnPagaMem.ForeColor = System.Drawing.SystemColors.ControlText;
-               this.btnPagaMem.Location = new System.Drawing.Point(897, 188);
+               this.btnPagaMem.Location = new System.Drawing.Point(895, 234);
                this.btnPagaMem.Name = "btnPagaMem";
                this.btnPagaMem.Size = new System.Drawing.Size(100, 42);
                this.btnPagaMem.TabIndex = 17;
@@ -407,7 +404,7 @@
                // pictureBox2
                // 
                this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-               this.pictureBox2.Location = new System.Drawing.Point(730, 76);
+               this.pictureBox2.Location = new System.Drawing.Point(728, 122);
                this.pictureBox2.Name = "pictureBox2";
                this.pictureBox2.Size = new System.Drawing.Size(89, 62);
                this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -430,7 +427,7 @@
                // label10
                // 
                this.label10.AutoSize = true;
-               this.label10.Location = new System.Drawing.Point(825, 65);
+               this.label10.Location = new System.Drawing.Point(823, 111);
                this.label10.Name = "label10";
                this.label10.Size = new System.Drawing.Size(152, 25);
                this.label10.TabIndex = 0;
@@ -471,14 +468,13 @@
                // 
                // btnCancelaSocio
                // 
-               this.btnCancelaSocio.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
                this.btnCancelaSocio.Cursor = System.Windows.Forms.Cursors.Hand;
                this.btnCancelaSocio.FlatAppearance.BorderSize = 2;
                this.btnCancelaSocio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
                this.btnCancelaSocio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
                this.btnCancelaSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                this.btnCancelaSocio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.btnCancelaSocio.Location = new System.Drawing.Point(532, 243);
+               this.btnCancelaSocio.Location = new System.Drawing.Point(584, 306);
                this.btnCancelaSocio.Name = "btnCancelaSocio";
                this.btnCancelaSocio.Size = new System.Drawing.Size(129, 51);
                this.btnCancelaSocio.TabIndex = 10;
@@ -495,7 +491,7 @@
             this.historialDeSociosToolStripMenuItem});
                this.menuStrip1.Location = new System.Drawing.Point(0, 0);
                this.menuStrip1.Name = "menuStrip1";
-               this.menuStrip1.Size = new System.Drawing.Size(1050, 25);
+               this.menuStrip1.Size = new System.Drawing.Size(1502, 25);
                this.menuStrip1.TabIndex = 6;
                this.menuStrip1.Text = "menuStrip1";
                // 
@@ -517,7 +513,7 @@
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-               this.ClientSize = new System.Drawing.Size(1050, 600);
+               this.ClientSize = new System.Drawing.Size(1502, 718);
                this.Controls.Add(this.btnCancelaSocio);
                this.Controls.Add(this.groupMembresia);
                this.Controls.Add(this.groupPersonales);

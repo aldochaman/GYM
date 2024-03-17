@@ -307,7 +307,7 @@
                this.btnVenderProdc.ForeColor = System.Drawing.Color.White;
                this.btnVenderProdc.Image = ((System.Drawing.Image)(resources.GetObject("btnVenderProdc.Image")));
                this.btnVenderProdc.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-               this.btnVenderProdc.Location = new System.Drawing.Point(940, 35);
+               this.btnVenderProdc.Location = new System.Drawing.Point(842, 35);
                this.btnVenderProdc.Name = "btnVenderProdc";
                this.btnVenderProdc.Padding = new System.Windows.Forms.Padding(0, 2, 0, 15);
                this.btnVenderProdc.Size = new System.Drawing.Size(230, 130);
@@ -353,12 +353,12 @@
                // dtGWMemEx
                // 
                this.dtGWMemEx.AllowUserToAddRows = false;
-               this.dtGWMemEx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+               this.dtGWMemEx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
                this.dtGWMemEx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-               this.dtGWMemEx.Location = new System.Drawing.Point(29, 572);
+               this.dtGWMemEx.Location = new System.Drawing.Point(29, 247);
                this.dtGWMemEx.Name = "dtGWMemEx";
-               this.dtGWMemEx.Size = new System.Drawing.Size(1899, 505);
+               this.dtGWMemEx.Size = new System.Drawing.Size(1899, 648);
                this.dtGWMemEx.TabIndex = 5;
                this.dtGWMemEx.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGWMemEx_CellClick);
                this.dtGWMemEx.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtGWMemEx_CellFormatting);
@@ -366,12 +366,14 @@
                // 
                // label1
                // 
+               this.label1.AllowDrop = true;
                this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.label1.Location = new System.Drawing.Point(831, 168);
+               this.label1.Location = new System.Drawing.Point(720, 208);
                this.label1.Name = "label1";
-               this.label1.Size = new System.Drawing.Size(102, 23);
+               this.label1.Size = new System.Drawing.Size(239, 23);
                this.label1.TabIndex = 6;
-               this.label1.Text = "Expiradas";
+               this.label1.Text = "Membresias Expiradas";
+               this.label1.Click += new System.EventHandler(this.label1_Click);
                // 
                // timer1
                // 

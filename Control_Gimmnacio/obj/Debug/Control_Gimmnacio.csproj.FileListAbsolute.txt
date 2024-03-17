@@ -138,3 +138,11 @@ C:\Users\HP\source\repos\GYM\Control_Gimmnacio\obj\Debug\Control_Gimmnacio.exe
 C:\Users\HP\source\repos\GYM\Control_Gimmnacio\obj\Debug\Control_Gimmnacio.pdb
 C:\Users\HP\source\repos\GYM\Control_Gimmnacio\obj\Debug\Control_Gimmnacio.vRutinaUs.resources
 C:\Users\HP\source\repos\GYM\Control_Gimmnacio\obj\Debug\Control_Gimmnacio.vPlanUs.resources
+C:\Users\HP\source\repos\GYM\Control_Gimmnacio\bin\Debug\QRCoder.dll
+C:\Users\HP\source\repos\GYM\Control_Gimmnacio\bin\Debug\zxing.dll
+C:\Users\HP\source\repos\GYM\Control_Gimmnacio\bin\Debug\zxing.presentation.dll
+C:\Users\HP\source\repos\GYM\Control_Gimmnacio\bin\Debug\zxing.xml
+C:\Users\HP\source\repos\GYM\Control_Gimmnacio\bin\Debug\zxing.presentation.xml
+C:\Users\HP\source\repos\GYM\Control_Gimmnacio\bin\Debug\Framework.CrystalReports.dll
+C:\Users\HP\source\repos\GYM\Control_Gimmnacio\bin\Debug\stdole.dll
+C:\Users\HP\source\repos\GYM\Control_Gimmnacio\bin\Debug\Framework.CrystalReports.pdb

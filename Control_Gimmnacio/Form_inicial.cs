@@ -62,10 +62,12 @@ namespace Control_Gimmnacio
 
         private void bnt_rest_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            bnt_rest.Visible = false;
-            btn_max.Visible = true;
-        }
+               //this.WindowState = FormWindowState.Normal;
+               //bnt_rest.Visible = false;
+               //btn_max.Visible = true;
+
+               this.WindowState = FormWindowState.Maximized;
+          }
         // Arrastrar formulario
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

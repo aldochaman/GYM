@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control_Gimmnacio", "Control_Gimmnacio\Control_Gimmnacio.csproj", "{903E5F4F-4AFA-44CA-A380-D8F0B4C29766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.CrystalReports", "Framework.CrystalReports\Framework.CrystalReports.csproj", "{8F7099A7-7CE4-4AE2-B0B6-F7F54C059FAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{903E5F4F-4AFA-44CA-A380-D8F0B4C29766}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{903E5F4F-4AFA-44CA-A380-D8F0B4C29766}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{903E5F4F-4AFA-44CA-A380-D8F0B4C29766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F7099A7-7CE4-4AE2-B0B6-F7F54C059FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F7099A7-7CE4-4AE2-B0B6-F7F54C059FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F7099A7-7CE4-4AE2-B0B6-F7F54C059FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F7099A7-7CE4-4AE2-B0B6-F7F54C059FAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

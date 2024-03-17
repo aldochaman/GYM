@@ -1,0 +1,7 @@
+C:\Users\aldo0\Downloads\LandScaping-main\LandScaping-main\Framework.CrystalReports\bin\Release\Framework.CrystalReports.dll
+C:\Users\aldo0\Downloads\LandScaping-main\LandScaping-main\Framework.CrystalReports\bin\Release\Framework.CrystalReports.pdb
+C:\Users\aldo0\Downloads\LandScaping-main\LandScaping-main\Framework.CrystalReports\bin\Release\stdole.dll
+C:\Users\aldo0\Downloads\LandScaping-main\LandScaping-main\Framework.CrystalReports\obj\Release\Framework.CrystalReports.csproj.CoreCompileInputs.cache
+C:\Users\aldo0\Downloads\LandScaping-main\LandScaping-main\Framework.CrystalReports\obj\Release\Framework.CrystalReports.csproj.CopyComplete
+C:\Users\aldo0\Downloads\LandScaping-main\LandScaping-main\Framework.CrystalReports\obj\Release\Framework.CrystalReports.dll
+C:\Users\aldo0\Downloads\LandScaping-main\LandScaping-main\Framework.CrystalReports\obj\Release\Framework.CrystalReports.pdb

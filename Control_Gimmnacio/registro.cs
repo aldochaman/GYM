@@ -332,15 +332,16 @@ namespace Control_Gimmnacio
 
         private void btnAgregaSocio_Click(object sender, EventArgs e)
         {
-            if (txtNom.Text == "" || txtTel.Text == "" || txtDireccion.Text == "" || txtFB.Text == "" ||cbSexo.Text=="")
+            if (txtNom.Text == "" ||cbSexo.Text=="")
             {
-                MessageBox.Show("Falto llenar algunos Campos","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Falto llenar campo nombre o sexo","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
                 //pagar o no la membresia
                 //string nombre = "Michael Jose Jackson del Carmen";
                 string nombre="";
+                string Ls_qr = "";
                 nombre = txtNom.Text.Trim();
                 var datos = (from c in nombre.Split(' ') where Char.IsUpper(Convert.ToChar(c.Substring(0, 1))) select c.Substring(0, 1));
                 // Ahora probamos que funcione...
@@ -349,20 +350,32 @@ namespace Control_Gimmnacio
                 {
                     clave += s;
                 }
-                nombres = clave + dtNacimiento.Value.Year;
-                if (MessageBox.Show("¿Agregar Socio?","Agregar",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+                nombres = clave + DateTime.Now.Year.ToString() +
+                DateTime.Now.Month.ToString().PadLeft(2, '0') +
+                DateTime.Now.Day.ToString().PadLeft(2, '0') +
+                DateTime.Now.Hour.ToString().PadLeft(2, '0') +
+                DateTime.Now.Minute.ToString().PadLeft(2, '0') +
+                DateTime.Now.Second.ToString().PadLeft(2, '0');
+
+
+                Ls_qr = "EXE-" + nombres;
+                Ls_qr = Ls_qr.Replace(" ", "");
+                    if (MessageBox.Show("¿Agregar Socio?","Agregar",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
                 {
                     string fechaT = dtNacimiento.Value.ToString("yyyy/MM/dd");//
 
-                    qs = "insert into socio values('S-"+nombres+"','"+txtNom.Text.Trim() + "','"+fechaT+"','"+cbSexo.SelectedItem.ToString() + "','"+txtDireccion.Text.Trim() + "','"+txtTel.Text.Trim() + "','"+txtFB.Text.Trim() + "')";
+                    qs = "insert into socio (idsocio,nombre,fnacimiento,sexo,dir,tel,correo) values('"+Ls_qr+"','"+txtNom.Text.Trim() + "','"+fechaT+"','"+cbSexo.SelectedItem.ToString() + "','"+txtDireccion.Text.Trim() + "','"+txtTel.Text.Trim() + "','"+txtFB.Text.Trim() + "')";
                     
                     if (dts.insertar(qs)==true)
                     {
+                        //Crear codigo QR
+                        QRCodeGenerator qr = new QRCodeGenerator();
+                        qr.GenerateQrCode(Ls_qr, Application.StartupPath + "\\ARCHIVOS", Ls_qr);
 
                         MessageBox.Show("Datos Agregados!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         if (MessageBox.Show("¿Agregar Membresia?", "Agregar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-                            txtClaveM.Text = "S-" + nombres;
+                            txtClaveM.Text = Ls_qr;
                             btnAgregaSocio.Enabled = false;
                             groupMembresia.Enabled = true;
                            
@@ -378,8 +391,8 @@ namespace Control_Gimmnacio
                 }
                 else
                 {
-                  
-                }
+                         MessageBox.Show("Error al insertar", "Error");
+                    }
             }
         }
         #endregion

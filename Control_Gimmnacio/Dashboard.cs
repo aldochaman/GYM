@@ -474,7 +474,12 @@ namespace Control_Gimmnacio
             new vVender().ShowDialog();
         }
 
-        private void btnNuevoVis_Click(object sender, EventArgs e)
+          private void label1_Click(object sender, EventArgs e)
+          {
+
+          }
+
+          private void btnNuevoVis_Click(object sender, EventArgs e)
         {
             vis.ShowDialog();
         }
